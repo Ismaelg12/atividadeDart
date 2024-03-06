@@ -1,0 +1,164 @@
+void main() {
+  // 1. Declare uma variável idade e atribua um valor a ela.
+  int idade = 25;
+
+  // 2. Escreva uma estrutura condicional if para verificar se idade é maior que 18. Se sim, imprima "Maior de idade".
+  if (idade > 18) {
+    print("Maior de idade");
+  }
+
+  // 3. Utilize switch para imprimir "Criança" se idade for menor que 12, "Adolescente" entre 12 e 18, e "Adulto" se for maior que 18.
+  switch (idade) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+    case 7:
+    case 8:
+    case 9:
+    case 10:
+    case 11:
+      print("Criança");
+      break;
+    case 12:
+    case 13:
+    case 14:
+    case 15:
+    case 16:
+    case 17:
+    case 18:
+      print("Adolescente");
+      break;
+    default:
+      print("Adulto");
+  }
+
+  // 4. Declare uma constante PI com o valor de 3.14.
+  const double PI = 3.14;
+  print(PI);
+  // 5. Crie um loop for que imprima os números de 1 a 10.
+  for (int i = 1; i <= 10; i++) {
+    print(i);
+  }
+
+  // 6. Utilize um loop for para imprimir a tabuada do número 5.
+  for (int i = 1; i <= 10; i++) {
+    print("5 x $i = ${5 * i}");
+  }
+
+  // 7. Declare uma variável final chamada anoAtual e atribua o ano atual a ela.
+  final int anoAtual = DateTime.now().year;
+  print(anoAtual);
+
+  // 8. Crie uma lista de strings com os nomes de três cores. Use um loop for para imprimir cada cor na lista.
+  List<String> cores = ["Azul", "Verde", "Vermelho"];
+  for (String cor in cores) {
+    print(cor);
+  }
+
+  // 9. Escreva um código que declare duas variáveis, a e b, e depois troque os valores delas.
+  int a = 5;
+  int b = 10;
+  int temp = a;
+  a = b;
+  b = temp;
+  print("a: $a, b: $b");
+
+  // 10. Utilize if e else para verificar se um número n é par ou ímpar.
+  int n = 12;
+  if (n % 2 == 0) {
+    print("$n é par");
+  } else {
+    print("$n é ímpar");
+  }
+
+  // 11. Com um loop for, imprima todos os números pares de 0 a 20.
+  for (int i = 0; i <= 20; i++) {
+    if (i % 2 == 0) {
+      print(i);
+    }
+  }
+
+  // 12. Declare uma variável const chamada maxIdade com valor 100 e use-a para verificar se idade é menor que maxIdade.
+  const int maxIdade = 100;
+  if (idade < maxIdade) {
+    print("Menor que $maxIdade");
+  }
+
+  // 13. Crie uma função que receba um número e retorne o fatorial desse número.
+  int fatorial(int n) {
+    if (n == 0 || n == 1) {
+      return 1;
+    }
+    return n * fatorial(n - 1);
+  }
+
+  print("Fatorial de 4: ${fatorial(4)}");
+
+  // 14. Escreva um código que use switch para imprimir "Positivo" se um número x for maior que 0, "Negativo" se for menor que 0, e "Zero" se for igual a 0.
+  int z = 1;
+  switch (z.compareTo(0)) {
+    case 1:
+      print("Positivo");
+      break;
+    case -1:
+      print("Negativo");
+      break;
+    default:
+      print("Zero");
+  }
+
+  // 15. Utilize um loop for para imprimir os primeiros 10 números da sequência de Fibonacci.
+  int fib(int n) {
+    if (n <= 1) {
+      return n;
+    }
+    return fib(n - 1) + fib(n - 2);
+  }
+
+  for (int i = 0; i < 10; i++) {
+    print(fib(i));
+  }
+
+  // 16. Declare uma lista de inteiros e use um loop for para somar todos os elementos da lista.
+  List<int> numeros = [1, 2, 30, 4, 5];
+  int soma = 0;
+  for (int num in numeros) {
+    soma += num;
+  }
+  print("Soma: $soma");
+
+  // 17. Crie uma variável final chamada diasDaSemana e atribua a ela uma lista com os dias da semana. Use um loop para imprimir todos os dias da lista.
+  final List<String> diasDaSemana = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"];
+  for (String dia in diasDaSemana) {
+    print(dia);
+  }
+
+  // 18. Escreva um código que verifique se uma string s está vazia. Se estiver vazia, imprima "String vazia", caso contrário, imprima "String não vazia".
+  String s = "";
+  if (s.isEmpty) {
+    print("String vazia");
+  } else {
+    print("String não vazia");
+  }
+
+  // 19. Utilizando if-else, determine e imprima qual o maior número entre dois números x e y.
+  int x = 5;
+  int y = 3;
+  if (x > y) {
+    print("$x é maior que $y");
+  } else if (x < y) {
+    print("$y é maior que $x");
+  } else {
+    print("$x e $y são iguais");
+  }
+
+  // 20. Declare uma const chamada taxaDeConversao e use-a para converter um valor de dólares para reais, considerando que 1 dólar vale 5.23 reais. Imprima o resultado.
+  const double taxaDeConversao = 5.23;
+  double dolares = 55;
+  double reais = dolares * taxaDeConversao;
+  print("$dolares dólares equivalem a $reais reais.");
+}
